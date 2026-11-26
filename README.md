@@ -49,14 +49,12 @@ movie_recommendation_v1/
 │   ├── content.py
 │   ├── collaborative.py
 │   └── hybrid.py
-├── app_v1.py
 └── app_v2.py
 ```
 
 - **`data/`** stores the original movie and rating data.
 - **`notebooks/`** documents data exploration, algorithm development, experiments, and evaluation.
 - **`recommender/`** contains reusable Python modules for the application.
-- **`app_v1.py`** preserves the previous Korean-language Streamlit interface.
 - **`app_v2.py`** is the current English-language Streamlit application.
 
 ## Notebook Development Process
@@ -275,18 +273,6 @@ from recommender.hybrid import recommend_hybrid_movies
 
 The current application does not include persistent user accounts or permanent storage of individual users' submitted ratings. Movie poster integration has not been completed.
 
-### `app_v1.py` vs. `app_v2.py`
-
-| Feature | `app_v1.py` | `app_v2.py` |
-|---|---|---|
-| Interface language | Korean | English |
-| Genre selection | Yes | Yes |
-| Movie ratings | Yes | Yes |
-| Hybrid recommendations | Yes | Yes |
-| Recommendation cards | Yes | Yes |
-| Recommendation explanations | Yes | Yes |
-| Intended use | Previous version/archive | Current development version |
-
 ## System Architecture
 
 ```text
@@ -363,11 +349,7 @@ Open a terminal in the root project directory:
 python -m streamlit run app_v2.py
 ```
 
-Streamlit opens a local browser page for the application. The previous Korean-language version can be started with:
-
-```bash
-python -m streamlit run app_v1.py
-```
+Streamlit opens a local browser page for the application.
 
 ## Limitations and Future Improvements
 
